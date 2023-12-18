@@ -116,7 +116,7 @@ notes_entry.place(x=60,y=90)
 #Выполнение функции заметок
 button1 = Button(window,text='Добавить заметки', bg = 'Turquoise',fg='Red',command=add_notes).place(x=10,y=220)
 button2 = Button(window,text='Просмотр заметок', bg = 'Turquoise',fg='Red',command=view_notes).place(x=130,y=220)
-button3 = Button(window,text='Удалять заметки', bg = 'Turquoise',fg='Red',command=delete_notes).place(x=255,y=220)
+button3 = Button(window,text='Удалить заметки', bg = 'Turquoise',fg='Red',command=delete_notes).place(x=255,y=220)
 button4 = Button(window,text='Обновить', bg = 'Turquoise',fg='Red',command=update_notes).place(x=365,y=220)
  
 #закрываем приложение
