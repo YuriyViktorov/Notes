@@ -3,7 +3,7 @@ from tkinter import *
 from tkinter import messagebox
 #Создание подключения к базе данных и подключение к таблице
 try:
-       con = sql.connect('pin_your_note.db')
+       con = sql.connect('Notes.json')
        cur = con.cursor()
        cur.execute('''CREATE TABLE notes_table
                         (date text, notes_title text, notes text)''')
@@ -95,7 +95,7 @@ def update_notes():
 #Вызов класса для просмотра окна
 window = Tk()
 #Установка размеров окна и заголовка
-window.geometry("550x350")
+window.geometry("500x280")
 window.title("ЗАМЕТКИ")
  
 title_label = Label(window, text="Запишите свою заметку").pack()
@@ -110,14 +110,14 @@ notes_title_entry = Entry(window,  width=30)
 notes_title_entry.place(x=80,y=50)
 #Ввод заметок
 notes_label = Label(window, text="Записи:").place(x=10,y=90)
-notes_entry = Text(window, width=50,height=5)
+notes_entry = Text(window, width=50,height=6)
 notes_entry.place(x=60,y=90)
  
 #Выполнение функции заметок
-button1 = Button(window,text='Добавить заметки', bg = 'Turquoise',fg='Red',command=add_notes).place(x=10,y=190)
-button2 = Button(window,text='Просмотр заметок', bg = 'Turquoise',fg='Red',command=view_notes).place(x=130,y=190)
-button3 = Button(window,text='Удалять заметки', bg = 'Turquoise',fg='Red',command=delete_notes).place(x=255,y=190)
-button4 = Button(window,text='Примечания к обновлению', bg = 'Turquoise',fg='Red',command=update_notes).place(x=365,y=190)
+button1 = Button(window,text='Добавить заметки', bg = 'Turquoise',fg='Red',command=add_notes).place(x=10,y=220)
+button2 = Button(window,text='Просмотр заметок', bg = 'Turquoise',fg='Red',command=view_notes).place(x=130,y=220)
+button3 = Button(window,text='Удалять заметки', bg = 'Turquoise',fg='Red',command=delete_notes).place(x=255,y=220)
+button4 = Button(window,text='Обновить', bg = 'Turquoise',fg='Red',command=update_notes).place(x=365,y=220)
  
 #закрываем приложение
 window.mainloop()
